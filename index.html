@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OPEN WORLD // TOKYO METROPOLIS - GTA / Watch Dogs</title>
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+<div id="loader">
+  <div class="spinner"></div>
+  <h2>METRÓPOLIS TOKYO // MUNDO ABIERTO</h2>
+  <p>Generando 36 manzanas, tráfico, parque, tren expreso y distritos...</p>
+  <div id="loadbar"><div></div></div>
+</div>
+
+<div id="app"></div>
+<div id="crosshair"></div>
+<div id="prompt-box">Presiona <b>[G]</b> para conducir vehículo</div>
+
+<!-- Top Center Badge -->
+<div class="hud" id="topbar">
+  <span id="districtName" class="unit-tag">DISTRITO CENTRAL SHINJUKU</span>
+  <span id="chunkBadge" class="unit-tag" style="color:#38bdf8;font-weight:700;">CHUNK [0, 0]</span>
+  <span id="stateBadge" class="state-badge state-idle">EXPLORACIÓN</span>
+</div>
+
+<!-- Top Right GTA HUD -->
+<div class="hud" id="gta-hud">
+  <div id="wanted-stars">
+    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+  </div>
+  <div id="cash-display">$45,000</div>
+  <div id="weapon-card">
+    <div id="weapon-name">VX-47 SPEC-OPS CARBINE</div>
+    <div id="ammo-count"><b id="magAmmo">30</b> <span>/ ∞</span></div>
+    <div id="telemetry-mini">
+      <span id="sSpeed">0.0 m/s</span>
+      <span id="sFps">60 FPS</span>
+      <span id="sDist">0 bajas</span>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Left Radar & Bars -->
+<div id="radar-container">
+  <div id="minimap"><canvas id="mapCanvas" width="195" height="195"></canvas></div>
+  <div id="vitals">
+    <div class="vital-bar"><div id="hp-fill" class="vital-fill"></div></div>
+    <div class="vital-bar"><div id="armor-fill" class="vital-fill"></div></div>
+    <div class="vital-bar"><div id="stam-fill" class="vital-fill"></div></div>
+  </div>
+</div>
+
+<!-- Bottom Right Controls -->
+<div class="hud" id="controls">
+  <h4>Controles Mundo Abierto</h4>
+  <div><span class="key" data-k="w">W</span><span class="key" data-k="a">A</span><span class="key" data-k="s">S</span><span class="key" data-k="d">D</span> Mover / Conducir &nbsp; <span class="key" data-k="shift">Shift</span> Sprint</div>
+  <div><span class="key" data-k="g">G</span> Subir / Bajar de Auto &nbsp; <span class="key" data-k="space">Espacio</span> Saltar</div>
+  <div><span class="key" data-k="q">Click Der / Q</span> Apuntar (Cámara Hombro)</div>
+  <div><span class="key" data-k="f">Click Izq / F</span> Disparar &nbsp; <span class="key" data-k="r">R</span> Recargar</div>
+  <div><span class="key" data-k="e">E</span> Hackear Ciudad / ctOS</div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module" src="./main.js"></script>
+</body>
+</html>
